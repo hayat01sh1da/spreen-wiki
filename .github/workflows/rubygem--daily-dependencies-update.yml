@@ -53,7 +53,7 @@ jobs:
           ## 1. Overview
 
           This pull request was created automatically by the RubyGem - Daily Dependencies Update workflow.
-          It upgrades RubyGems and Bundler, updates every gem to the latest version allowed by the Gemfile, mirrors the updated versions to the Gemfile, mirrors the new Bundler version to the Environment section of every README.md, and re-locks Gemfile.lock so its DEPENDENCIES section stays in sync with the Gemfile:
+          It upgrades RubyGems and Bundler, updates every gem to the latest version allowed by the Gemfile, mirrors the updated versions to the Gemfile, mirrors the new Bundler and gem versions to the Environment section of every README.md that documents them, and re-locks Gemfile.lock so its DEPENDENCIES section stays in sync with the Gemfile:
 
           ~~~console
           gem update --system
