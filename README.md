@@ -10,7 +10,7 @@
 
 # spreen-wiki
 
-<img src="./assets/spreen-icon.svg" align="center" width="300" alt="spreen: an origami falcon stooping across a falcon's-eye stone" />
+<img src="./assets/spreen-wiki-icon.svg" align="center" width="300" alt="spreen-wiki: an origami falcon stooping across a falcon's-eye stone" />
 
 Organises a GitHub wiki: generates `Home.md` and `_Sidebar.md` by grouping the pages by the **Owner** or **Category** declared on the first line of each page (English and Japanese labels built in, extensible via a config file), and exports reports of the pages whose owner or category is unknown.
 
