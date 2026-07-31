@@ -9,7 +9,7 @@ from .sidebar import Sidebar
 from .unknown_wiki_count_list_exporter import UnknownWikiCountListExporter
 from .unknown_wiki_list_exporter_for_llm import UnknownWikiListExporterForLLM
 
-__version__ = '0.1.0'
+__version__ = '0.2.1'
 
 __all__ = [
     'Application',

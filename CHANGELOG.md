@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
 One repository hosts two packages, so releases are tagged per ecosystem (`ruby-vX.Y.Z` for the RubyGems gem, `python-vX.Y.Z` for the PyPI library).
 
+## 0.2.1 (PyPI)
+
+PyPI only — the RubyGems gem is unaffected and stays on `0.3.0`, so no `ruby-` tag is cut.
+
+### 1. Fixed
+
+- `wiki-organise --version` reported `0.1.0` on the `0.2.0` release. `__version__` in `spreen_wiki/__init__.py` is declared separately from the packaging metadata in `pyproject.toml`, and the `0.2.0` release bumped only the latter, so the published wheel carried a stale constant. Both now read `0.2.1`. The gem is not affected: its gemspec reads `SpreenWiki::VERSION`, so the version has a single source there.
+
+### 2. Added
+
+- `PyPI/test/test_version.py`, asserting `spreen_wiki.__version__` matches the `version` declared in `pyproject.toml`, so a release that bumps only one of the two fails CI instead of shipping.
+
 ## 0.3.0 (RubyGem) / 0.2.0 (PyPI)
 
 Both ecosystems ship this release: the gem goes `0.2.0` → `0.3.0` (tag `ruby-v0.3.0`) and the library `0.1.0` → `0.2.0` (tag `python-v0.2.0`). The version numbers differ because the library sat out `0.2.0`, which was RubyGem-only.
