@@ -1,5 +1,5 @@
-"""Command line interface behind the `spreen` executable:
-`spreen <update|count-report|llm-export> [options]`."""
+"""Command line interface behind the `wiki-organise` executable:
+`wiki-organise <update|count-report|llm-export> [options]`."""
 
 import argparse
 import sys
@@ -46,7 +46,7 @@ def _common_parser() -> argparse.ArgumentParser:
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog='spreen',
+        prog='wiki-organise',
         description='Organise a GitHub wiki: generate Home.md/_Sidebar.md '
                     'and export unknown-namespace reports.')
     parser.add_argument('--version', action='version', version=__version__)

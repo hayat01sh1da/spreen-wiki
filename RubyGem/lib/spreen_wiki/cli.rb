@@ -9,11 +9,11 @@ require_relative 'unknown_wiki_count_list_exporter'
 require_relative 'unknown_wiki_list_exporter_for_llm'
 
 module SpreenWiki
-  # Command line interface behind the `spreen` executable:
-  # `spreen <update|count-report|llm-export> [options]`.
+  # Command line interface behind the `wiki-organise` executable:
+  # `wiki-organise <update|count-report|llm-export> [options]`.
   class CLI
     HELP = <<~HELP
-      Usage: spreen <command> [options]
+      Usage: wiki-organise <command> [options]
 
       Commands:
         update        Regenerate Home.md and _Sidebar.md from the wiki tree
@@ -21,7 +21,7 @@ module SpreenWiki
         llm-export    Export the unknown-namespace wiki list for an LLM
         version       Print the version
 
-      Run `spreen <command> --help` to list the command's options.
+      Run `wiki-organise <command> --help` to list the command's options.
     HELP
 
     # Flags shared by every command, mapped to the keyword arguments of the
@@ -122,7 +122,7 @@ module SpreenWiki
     # @rbs command: String
     # @rbs return: OptionParser
     def parser(command)
-      OptionParser.new("Usage: spreen #{command} [options]") do |opt|
+      OptionParser.new("Usage: wiki-organise #{command} [options]") do |opt|
         add_common_options(opt)
         add_command_options(opt, command)
       end

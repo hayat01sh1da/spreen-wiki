@@ -14,21 +14,21 @@ $ pipx install spreen-wiki
 
 ```command
 $ cd path/to/your-repo.wiki
-$ spreen update --path . --org your-org --repo your-repo
+$ wiki-organise update --path . --org your-org --repo your-repo
 Updated Home.md and _Sidebar.md.
 Check them out at 'https://github.com/your-org/your-repo/wiki' !!
 
-$ spreen count-report --path .
+$ wiki-organise count-report --path .
 Unknown Owner nor Necessity: 1
 Unowned but Necessary: 1
 Unowned: 10
 Exported the unknown wiki count report to './unknown_wiki_count_list_by_namespace.txt'.
 
-$ spreen llm-export --path .
+$ wiki-organise llm-export --path .
 Exported the unknown wiki list for LLM to './unknown_wiki_list_for_llm.txt'.
 ```
 
-Common flags (see `spreen <command> --help`): `--group-by Owner|Category`, `--language English|Japanese`, `--overflow` (split Home into per-namespace pages under `wikis-by-owner/`), `--template-dir`, `--config`, `--exclude`, `--output`, `--wiki-url`.
+Common flags (see `wiki-organise <command> --help`): `--group-by Owner|Category`, `--language English|Japanese`, `--overflow` (split Home into per-namespace pages under `wikis-by-owner/`), `--template-dir`, `--config`, `--exclude`, `--output`, `--wiki-url`.
 
 Persistent settings, custom labels and additional languages go into a [`.spreen.yml`](../README.md#4-configuration) at the wiki root.
 

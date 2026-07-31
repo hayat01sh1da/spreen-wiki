@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
 One repository hosts two packages, so releases are tagged per ecosystem (`ruby-vX.Y.Z` for the RubyGems gem, `python-vX.Y.Z` for the PyPI library).
 
+## 0.3.0 (RubyGem) / 0.2.0 (PyPI)
+
+Both ecosystems ship this release: the gem goes `0.2.0` → `0.3.0` (tag `ruby-v0.3.0`) and the library `0.1.0` → `0.2.0` (tag `python-v0.2.0`). The version numbers differ because the library sat out `0.2.0`, which was RubyGem-only.
+
+### 1. Changed
+
+- **Breaking (gem and library):** renamed the CLI executable from `spreen` to `wiki-organise`. The brand name carried no hint of what the command does, whereas `wiki-organise` states the object and the action, matching the `<object>-<action>` shape of the sibling CLIs (`pr-title`, `track-delimiter`, `file-clean`, `readme-update`). This restores the working title the tool carried before the 0.1.0 naming decision. The gem name, the PyPI project name, the `SpreenWiki`/`spreen_wiki` namespaces, the `.spreen.yml` config file and every subcommand and flag are unchanged — only the executable name differs.
+
+### 2. Removed
+
+- The `spreen` executable, superseded by `wiki-organise`. No alias is shipped, so scripts, aliases and CI steps invoking `spreen` must be updated to `wiki-organise`.
+
 ## 0.2.0
 
 RubyGem only — the PyPI library has no shipped changes since `0.1.0` and stays on that version, so no `python-v0.2.0` tag is cut.

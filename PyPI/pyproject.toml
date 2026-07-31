@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spreen-wiki"
-version = "0.1.0"
+version = "0.2.0"
 description = "Organise GitHub wiki Home and _Sidebar pages by owner or category."
 readme = "README.md"
 license = "MIT"
@@ -29,7 +29,7 @@ Source = "https://github.com/hayat01sh1da/spreen-wiki"
 Changelog = "https://github.com/hayat01sh1da/spreen-wiki/blob/master/CHANGELOG.md"
 
 [project.scripts]
-spreen = "spreen_wiki.cli:main"
+wiki-organise = "spreen_wiki.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

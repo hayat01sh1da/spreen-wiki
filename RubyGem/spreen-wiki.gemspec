@@ -25,6 +25,6 @@ Gem::Specification.new do |spec|
   spec.files         = Dir['exe/*', 'lib/**/*.rb', 'lib/spreen_wiki/templates/**/*.md', 'sig/**/*.rbs',
                            'README.md', 'LICENSE.txt']
   spec.bindir        = 'exe'
-  spec.executables   = ['spreen']
+  spec.executables   = ['wiki-organise']
   spec.require_paths = ['lib']
 end
