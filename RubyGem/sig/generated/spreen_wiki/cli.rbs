@@ -1,8 +1,8 @@
 # Generated from lib/spreen_wiki/cli.rb with RBS::Inline
 
 module SpreenWiki
-  # Command line interface behind the `spreen` executable:
-  # `spreen <update|count-report|llm-export> [options]`.
+  # Command line interface behind the `wiki-organise` executable:
+  # `wiki-organise <update|count-report|llm-export> [options]`.
   class CLI
     HELP: ::String
 

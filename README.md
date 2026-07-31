@@ -15,7 +15,7 @@
 Organises a GitHub wiki: generates `Home.md` and `_Sidebar.md` by grouping the pages by the **Owner** or **Category** declared on the first line of each page (English and Japanese labels built in, extensible via a config file), and exports reports of the pages whose owner or category is unknown.
 
 The tool ships twice with identical behaviour: as the RubyGems gem **`spreen-wiki`** and as the PyPI library **`spreen-wiki`**.  
-Both install the same `spreen` command.
+Both install the same `wiki-organise` command.
 
 ## 1. Origin of the Name
 
@@ -46,7 +46,7 @@ Clone your repository's wiki, declare an owner (or category) on the first line o
 ```command
 $ git clone git@github.com:<org>/<repo>.wiki.git
 $ cd <repo>.wiki
-$ spreen update --path . --org <org> --repo <repo>
+$ wiki-organise update --path . --org <org> --repo <repo>
 Updated Home.md and _Sidebar.md.
 Check them out at 'https://github.com/<org>/<repo>/wiki' !!
 $ git add Home.md _Sidebar.md && git commit -m 'Organise wiki' && git push origin master
@@ -55,11 +55,11 @@ $ git add Home.md _Sidebar.md && git commit -m 'Organise wiki' && git push origi
 The other two commands export reports about the pages whose owner/category is still unknown:
 
 ```command
-$ spreen count-report --path . # counts per unknown namespace
-$ spreen llm-export --path .   # flat page list to feed to an LLM
+$ wiki-organise count-report --path . # counts per unknown namespace
+$ wiki-organise llm-export --path .   # flat page list to feed to an LLM
 ```
 
-Run `spreen <command> --help` for the full flag list (`--group-by`, `--language`, `--overflow`, `--template-dir`, `--exclude`, `--output`, ...).
+Run `wiki-organise <command> --help` for the full flag list (`--group-by`, `--language`, `--overflow`, `--template-dir`, `--exclude`, `--output`, ...).
 
 ## 3. Wiki Page Convention
 
