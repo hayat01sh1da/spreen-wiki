@@ -5,7 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
 One repository hosts two packages, so releases are tagged per ecosystem (`ruby-vX.Y.Z` for the RubyGems gem, `python-vX.Y.Z` for the PyPI library).
 
-## 0.2.1 (PyPI)
+## 0.3.1 (RubyGem) / 0.2.2 (PyPI) - 2026-08-06
+
+Both ecosystems ship this maintenance release: the gem goes `0.3.0` -> `0.3.1` (tag `ruby-v0.3.1`) and the library `0.2.1` -> `0.2.2` (tag `python-v0.2.2`).
+The `wiki-organise` CLI and the library behaviour are unchanged.
+
+### 1. Changed
+
+- Development toolchain moved to CPython 3.14.7 (`PyPI/.python-version`) and the pinned development dependencies were refreshed (`RubyGem/Gemfile.lock`, `PyPI/requirements.lock`). Runtime dependencies (`PyYAML >= 6.0`) are unchanged, and the published `requires-python` (`>= 3.10`) and `required_ruby_version` (`>= 3.4`) floors are untouched.
+- The per-ecosystem READMEs shipped inside the packages restate the refreshed toolchain versions.
+
+## 0.2.1 (PyPI) - 2026-07-31
 
 PyPI only — the RubyGems gem is unaffected and stays on `0.3.0`, so no `ruby-` tag is cut.
 
@@ -17,7 +27,7 @@ PyPI only — the RubyGems gem is unaffected and stays on `0.3.0`, so no `ruby-`
 
 - `PyPI/test/test_version.py`, asserting `spreen_wiki.__version__` matches the `version` declared in `pyproject.toml`, so a release that bumps only one of the two fails CI instead of shipping.
 
-## 0.3.0 (RubyGem) / 0.2.0 (PyPI)
+## 0.3.0 (RubyGem) / 0.2.0 (PyPI) - 2026-07-31
 
 Both ecosystems ship this release: the gem goes `0.2.0` → `0.3.0` (tag `ruby-v0.3.0`) and the library `0.1.0` → `0.2.0` (tag `python-v0.2.0`). The version numbers differ because the library sat out `0.2.0`, which was RubyGem-only.
 
@@ -29,7 +39,7 @@ Both ecosystems ship this release: the gem goes `0.2.0` → `0.3.0` (tag `ruby-v
 
 - The `spreen` executable, superseded by `wiki-organise`. No alias is shipped, so scripts, aliases and CI steps invoking `spreen` must be updated to `wiki-organise`.
 
-## 0.2.0
+## 0.2.0 - 2026-07-20
 
 RubyGem only — the PyPI library has no shipped changes since `0.1.0` and stays on that version, so no `python-v0.2.0` tag is cut.
 
@@ -53,7 +63,7 @@ RubyGem only — the PyPI library has no shipped changes since `0.1.0` and stays
 
 - The `Spreen::Wiki` namespace and the `lib/spreen/wiki/` load path, superseded by `SpreenWiki` and `lib/spreen_wiki/`. `require 'spreen/wiki'` no longer resolves.
 
-## 0.1.0
+## 0.1.0 - 2026-07-15
 
 ### 1. Added
 
