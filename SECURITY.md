@@ -15,7 +15,7 @@
 | Ruby toolchain           | Ruby 4.0.6 (`.ruby-version`)        | Gem sources in `RubyGem/`; the published gem supports Ruby >= 3.4 (`required_ruby_version`).                                                                                          |
 | RubyGems                 | 4.0.16                              | Publishing requires MFA (`rubygems_mfa_required` is set in the gemspec).                                                                                                              |
 | Bundler                  | 4.0.16                              | Resolves and installs the gems declared in `RubyGem/Gemfile`; `Gemfile.lock` is committed.                                                                                            |
-| Python toolchain         | CPython 3.14.6 (`.python-version`)  | Package sources in `PyPI/src/`; the published library supports Python >= 3.10 (`requires-python`).                                                                                    |
+| Python toolchain         | CPython 3.14.7 (`.python-version`)  | Package sources in `PyPI/src/`; the published library supports Python >= 3.10 (`requires-python`).                                                                                    |
 | Python dependencies      | `PyYAML >= 6.0` (runtime)           | Declared in `PyPI/pyproject.toml`; development/CI dependencies are pinned in `PyPI/requirements.lock`.                                                                                |
 | GitHub Actions workflows | Runs on GitHub-hosted Ubuntu images | CI, daily dependency updates, wiki cron jobs (Slack notifications, wiki mutation), and release workflows; keep action versions pinned and `GITHUB_TOKEN` permissions least-privilege. |
 
