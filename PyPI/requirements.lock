@@ -1,10 +1,10 @@
-ast_serialize==0.6.0
+ast_serialize==0.7.0
 autoflake8==0.4.1
 autopep8==2.3.2
 flake8==7.3.0
 iniconfig==2.3.0
 invoke==3.0.3
-librt==0.13.0
+librt==0.14.0
 mccabe==0.7.0
 mypy==2.3.0
 mypy_extensions==1.1.0
