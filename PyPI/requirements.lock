@@ -6,7 +6,7 @@ iniconfig==2.3.0
 invoke==3.0.3
 librt==0.15.0
 mccabe==0.7.0
-mypy==2.3.0
+mypy==2.3.1
 mypy_extensions==1.1.0
 packaging==26.3
 pathspec==1.1.1
@@ -16,6 +16,6 @@ pyflakes==3.4.0
 Pygments==2.20.0
 pytest==9.1.1
 PyYAML==6.0.3
-types-PyYAML==6.0.12.20260724
+types-PyYAML==6.0.12.20260815
 typing_extensions==4.16.0
 pip==26.2.1
