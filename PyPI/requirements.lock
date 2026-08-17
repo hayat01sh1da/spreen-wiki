@@ -13,7 +13,7 @@ pathspec==1.1.1
 pluggy==1.6.0
 pycodestyle==2.14.0
 pyflakes==3.4.0
-Pygments==2.20.0
+Pygments==2.21.0
 pytest==9.1.1
 PyYAML==6.0.3
 types-PyYAML==6.0.12.20260815
