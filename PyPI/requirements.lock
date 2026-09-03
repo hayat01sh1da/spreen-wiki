@@ -1,4 +1,4 @@
-ast_serialize==0.8.0
+ast_serialize==0.9.0
 autoflake8==0.4.1
 autopep8==2.3.2
 flake8==7.3.0
