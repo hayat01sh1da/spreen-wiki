@@ -93,5 +93,4 @@ jobs:
           commit-message: "[Daily][PyPI] Update PyPI library dependencies at ${{ env.TIMESTAMP }}"
           title: "[Daily][PyPI] Update PyPI Library Dependencies"
           body-path: ${{ runner.temp }}/pr_body.md
-          reviewers: hayat01sh1da
           assignees: hayat01sh1da
