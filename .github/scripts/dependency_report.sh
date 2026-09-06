@@ -103,8 +103,15 @@ while IFS= read -r line; do
       fi
       ;;
     *)
+      # The name holds no whitespace and no colon. Inside `snapshots:` a
+      # package's own dependencies sit one level deeper, and an aliased one
+      # reads `react-is-18: react-is@18.3.1`, which a laxer name pattern reads
+      # as a package called `    react-is-18: react-is` and links to a registry
+      # URL that does not exist. Such an alias moves without the aliased package
+      # changing at all: jest 30.5.1 renamed `react-is-18` to
+      # `'@jest/react-is-18'` while react-is itself stayed on 18.3.1.
       [[ $line == *'('* ]] && continue
-      [[ $line =~ ^([+-])\ \ \'?(.+)@([0-9][^\':]*)\'?:?$ ]] || continue
+      [[ $line =~ ^([+-])\ \ \'?([^[:space:]\':]+)@([0-9][^\':]*)\'?:?$ ]] || continue
       ;;
   esac
   if [ -n "$requirement" ]; then
