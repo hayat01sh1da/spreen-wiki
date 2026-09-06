@@ -85,6 +85,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN || github.token }}
           sign-commits: true
           branch: hayat01sh1da/daily/rubygem/update-rubygems-dependencies
           delete-branch: true
