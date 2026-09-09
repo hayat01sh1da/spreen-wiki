@@ -50,8 +50,8 @@ All classes accept `base_path:`, `group_by:`, `language:`, `home_overflow:` plus
 ### 4-1. Environment
 
 - Ruby 4.0.6
-- Gemfile 4.0.20
-- Bundler 4.0.20
+- Gemfile 4.1.0.beta1
+- Bundler 4.1.0.beta1
 
 ```command
 $ bundle install
