@@ -1,7 +1,7 @@
 ast_serialize==0.11.2
 autoflake8==0.4.1
 autopep8==2.3.2
-flake8==7.3.0
+flake8==7.4.1
 iniconfig==2.3.0
 invoke==3.0.3
 librt==0.15.0
@@ -11,8 +11,8 @@ mypy_extensions==1.1.0
 packaging==26.3
 pathspec==1.1.1
 pluggy==1.6.0
-pycodestyle==2.14.0
-pyflakes==3.4.0
+pycodestyle==2.15.0
+pyflakes==4.0.0
 Pygments==2.21.0
 pytest==9.1.1
 PyYAML==6.0.3
