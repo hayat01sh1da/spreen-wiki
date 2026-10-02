@@ -2,7 +2,7 @@ autoflake8==0.4.1
 autopep8==2.3.2
 flake8==7.4.1
 invoke==3.0.3
-mypy==2.3.1
+mypy==2.4.0
 pytest==9.1.1
 PyYAML==6.0.3
 types-PyYAML==6.0.12.20260906
