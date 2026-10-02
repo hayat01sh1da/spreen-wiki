@@ -1,4 +1,4 @@
-ast_serialize==0.11.2
+ast_serialize==0.12.0
 autoflake8==0.4.1
 autopep8==2.3.2
 flake8==7.4.1
@@ -6,7 +6,7 @@ iniconfig==2.3.0
 invoke==3.0.3
 librt==0.16.0
 mccabe==0.7.0
-mypy==2.3.1
+mypy==2.4.0
 mypy_extensions==1.1.0
 packaging==26.3
 pathspec==1.1.1
