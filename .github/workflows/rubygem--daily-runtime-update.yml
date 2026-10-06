@@ -1,7 +1,7 @@
 # This workflow bumps the Ruby runtime every day to the latest patch release of the pinned minor series
 # that ruby/setup-ruby@v1 can install, and opens a pull request when a newer release is
 # available. The version files and every documented copy of the version move
-# together (see .github/scripts/runtime_update.py).
+# together (see .github/scripts/runtime_update.sh).
 # Library dependencies are updated separately by RubyGem - Daily Dependencies Update.
 
 name: RubyGem - Daily Runtime Update
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v7
       - name: Bump Ruby Version
         id: bump
-        run: python3 .github/scripts/runtime_update.py ruby "RubyGem" "${{ runner.temp }}/pr_body.md"
+        run: bash .github/scripts/runtime_update.sh ruby "RubyGem" "${{ runner.temp }}/pr_body.md"
       - name: Create Pull Request
         if: ${{ steps.bump.outputs.changed == 'true' }}
         uses: peter-evans/create-pull-request@v8
