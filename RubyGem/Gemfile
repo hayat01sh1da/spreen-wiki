@@ -7,7 +7,7 @@ gemspec
 gem 'minitest', '~> 5.27.0', require: false
 gem 'rake', '~> 13.4.2', require: false
 gem 'rbs-inline', '~> 0.14.0', require: false
-gem 'rubocop', '~> 1.88.2', require: false
+gem 'rubocop', '~> 1.91.0', require: false
 gem 'rubocop-minitest', '~> 0.39.1', require: false
-gem 'rubocop-performance', '~> 1.26.1', require: false
-gem 'steep', '~> 2.0.0', require: false
+gem 'rubocop-performance', '~> 1.27.0', require: false
+gem 'steep', '~> 2.1.0', require: false
