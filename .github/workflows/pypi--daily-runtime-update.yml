@@ -1,0 +1,39 @@
+# This workflow bumps the Python runtime every day to the latest stable patch release of the pinned minor series
+# that actions/setup-python can install, and opens a pull request when a newer release is
+# available. The version files and every documented copy of the version move
+# together (see .github/scripts/runtime_update.sh).
+# Library dependencies are updated separately by PyPI - Daily Dependencies Update.
+
+name: PyPI - Daily Runtime Update
+
+on:
+  schedule:
+    # 0:00 JST every day
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update_python_runtime:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Bump Python Version
+        id: bump
+        run: bash .github/scripts/runtime_update.sh python "PyPI" "${{ runner.temp }}/pr_body.md"
+      - name: Create Pull Request
+        if: ${{ steps.bump.outputs.changed == 'true' }}
+        uses: peter-evans/create-pull-request@v8
+        with:
+          sign-commits: true
+          branch: hayat01sh1da/daily/pypi/update-python-version
+          delete-branch: true
+          commit-message: "[Daily][PyPI] Bump Python from ${{ steps.bump.outputs.old }} to ${{ steps.bump.outputs.new }}"
+          title: "[Daily][PyPI] Bump Python from ${{ steps.bump.outputs.old }} to ${{ steps.bump.outputs.new }}"
+          body-path: ${{ runner.temp }}/pr_body.md
+          reviewers: hayat01sh1da
+          assignees: hayat01sh1da

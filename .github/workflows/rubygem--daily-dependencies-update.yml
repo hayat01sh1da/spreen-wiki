@@ -22,6 +22,21 @@ jobs:
       - uses: ./.github/actions/setup-ruby
         with:
           job-name: update_gem_dependencies
+      - name: Relax Gemfile Pins to Each Major Version
+        working-directory: ./RubyGem
+        run: |
+          # The mirror step below pins every gem to `~> <locked version>`, which
+          # caps the next update at the locked minor release (or, for four-segment
+          # versions such as Rails 8.1.3.1, at the locked patch release). Widen each
+          # pin to its major version first (minor version for 0.x gems) so minor
+          # and patch releases of frameworks and libraries can land; the mirror
+          # step re-pins them. Major upgrades stay manual.
+          ruby <<'RUBY'
+          gemfile = File.read('Gemfile').gsub(/^(\s*gem '[^']+', )'~> (\d+)(?:\.(\d+))?[^']*'/) do
+            "#{$1}'~> #{$2 == '0' ? "0.#{$3 || 0}.0" : "#{$2}.0"}'"
+          end
+          File.write('Gemfile', gemfile)
+          RUBY
       - name: Update Gem Dependencies
         working-directory: ./RubyGem
         env:
@@ -53,7 +68,7 @@ jobs:
           ## 1. Overview
 
           This pull request was created automatically by the RubyGem - Daily Dependencies Update workflow.
-          It upgrades RubyGems and Bundler, updates every gem to the latest version allowed by the Gemfile, mirrors the updated versions to the Gemfile, mirrors the new Bundler and gem versions to the Environment section of every README.md that documents them, and re-locks Gemfile.lock so its DEPENDENCIES section stays in sync with the Gemfile:
+          It upgrades RubyGems and Bundler, widens every Gemfile pin to its major version (minor version for 0.x gems) so that minor and patch releases of frameworks such as Rails can land, updates every gem to the latest version within those bounds, mirrors the updated versions to the Gemfile, mirrors the new Bundler and gem versions to the Environment section of every README.md that documents them, and re-locks Gemfile.lock so its DEPENDENCIES section stays in sync with the Gemfile:
 
           ~~~console
           gem update --system
