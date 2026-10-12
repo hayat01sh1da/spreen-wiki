@@ -24,6 +24,8 @@ jobs:
       - uses: actions/checkout@v7
       - name: Bump Python Version
         id: bump
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: bash .github/scripts/runtime_update.sh python "PyPI" "${{ runner.temp }}/pr_body.md"
       - name: Create Pull Request
         if: ${{ steps.bump.outputs.changed == 'true' }}
