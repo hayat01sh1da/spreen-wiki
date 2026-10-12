@@ -43,6 +43,7 @@ jobs:
       - name: Generate Pull Request Description
         env:
           BODY_PATH: ${{ runner.temp }}/pr_body.md
+          GH_TOKEN: ${{ github.token }}
         run: |
           {
             cat <<'OVERVIEW'
