@@ -10,7 +10,7 @@ mypy==2.4.0
 mypy_extensions==1.1.0
 packaging==26.3
 pathspec==1.1.1
-pluggy==1.6.0
+pluggy==1.7.0
 pycodestyle==2.15.0
 pyflakes==4.0.3
 Pygments==2.21.0
