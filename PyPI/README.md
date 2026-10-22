@@ -52,7 +52,7 @@ All classes accept `base_path`, `group_by`, `language`, `home_overflow` plus the
 ### 4-1. Environment
 
 - Python 3.14.8
-- pip 26.2.1
+- pip 26.2.2
 
 ```command
 $ pip install -r requirements.txt
