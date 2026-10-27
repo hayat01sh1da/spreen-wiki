@@ -1,4 +1,4 @@
-name: RubyGem - Release
+name: Release - RubyGem
 
 on:
   push:

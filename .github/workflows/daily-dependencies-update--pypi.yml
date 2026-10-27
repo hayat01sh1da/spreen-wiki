@@ -1,7 +1,7 @@
 # This workflow updates pip library dependencies every day and opens a pull
 # request when any dependency changes are detected.
 
-name: PyPI - Daily Dependencies Update
+name: Daily Dependencies Update - PyPI
 
 on:
   schedule:
@@ -49,7 +49,7 @@ jobs:
             cat <<'OVERVIEW'
           ## 1. Overview
 
-          This pull request was created automatically by the PyPI - Daily Dependencies Update workflow.
+          This pull request was created automatically by the Daily Dependencies Update - PyPI workflow.
           It upgrades pip itself, upgrades every library listed in requirements.txt to the latest available versions, regenerates requirements.lock (which also records the pip version), mirrors the updated versions to requirements.txt, and mirrors the new pip and library versions to the Environment section of every README.md that documents them:
 
           ~~~console
@@ -72,7 +72,7 @@ jobs:
 
           ## 4. References
 
-          - [PyPI - Daily Dependencies Update workflow run](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)
+          - [Daily Dependencies Update - PyPI workflow run](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)
           - [pip install documentation](https://pip.pypa.io/en/stable/cli/pip_install/)
           - [PyPI](https://pypi.org/)
           SUMMARY

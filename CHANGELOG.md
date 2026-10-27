@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
 One repository hosts two packages, so releases are tagged per ecosystem (`ruby-vX.Y.Z` for the RubyGems gem, `python-vX.Y.Z` for the PyPI library).
 
+## Unreleased
+
+### 1. Changed
+
+- Renamed the GitHub Actions workflows to the job-first naming convention: files `<ecosystem>--<job>.yml` -> `<job>--<ecosystem>.yml` (e.g. `ci--pypi.yml`) and workflow names `<Ecosystem> - <Job>` -> `<Job> - <Ecosystem>` (e.g. `CI - PyPI`), with the README status badges updated to match.
+- The release workflows are now `release--rubygem.yml` and `release--pypi.yml`; the RubyGems and PyPI Trusted Publishers are registered against the new filenames.
+
 ## 0.3.1 (RubyGem) / 0.2.2 (PyPI) - 2026-08-06
 
 Both ecosystems ship this maintenance release: the gem goes `0.3.0` -> `0.3.1` (tag `ruby-v0.3.1`) and the library `0.2.1` -> `0.2.2` (tag `python-v0.2.2`).

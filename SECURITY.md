@@ -22,7 +22,7 @@
 ## Release & Supply-chain Security
 
 - Releases are tag-driven (`ruby-vX.Y.Z` / `python-vX.Y.Z`) and publish through **Trusted Publishing (OIDC)** — `rubygems/release-gem@v1` and `pypa/gh-action-pypi-publish` exchange short-lived tokens per run; no registry API keys are stored in the repository or its secrets.
-- The PyPI publisher is bound to the `pypi` GitHub deployment environment; the RubyGems publisher is bound to the `rubygem--release.yml` workflow filename.
+- The PyPI publisher is bound to the `pypi` GitHub deployment environment; the RubyGems publisher is bound to the `release--rubygem.yml` workflow filename.
 - CodeQL code scanning runs on the repository, including workflow-permission checks.
 - Dependencies are refreshed by the daily dependency-update workflows; security-relevant bumps land through the normal PR flow.
 

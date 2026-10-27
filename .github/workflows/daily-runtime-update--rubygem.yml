@@ -2,9 +2,9 @@
 # that ruby/setup-ruby@v1 can install, and opens a pull request when a newer release is
 # available. The version files and every documented copy of the version move
 # together (see .github/scripts/runtime_update.sh).
-# Library dependencies are updated separately by RubyGem - Daily Dependencies Update.
+# Library dependencies are updated separately by Daily Dependencies Update - RubyGem.
 
-name: RubyGem - Daily Runtime Update
+name: Daily Runtime Update - RubyGem
 
 on:
   schedule:
