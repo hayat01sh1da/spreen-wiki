@@ -9,7 +9,7 @@ on:
       - master
     paths:
       - .github/actions/setup-python/action.yml
-      - .github/workflows/pypi--ci.yml
+      - .github/workflows/ci--pypi.yml
       - .python-version
       - PyPI/requirements.txt
       - PyPI/requirements.lock
@@ -18,7 +18,7 @@ on:
   pull_request:
     paths:
       - .github/actions/setup-python/action.yml
-      - .github/workflows/pypi--ci.yml
+      - .github/workflows/ci--pypi.yml
       - .python-version
       - PyPI/requirements.txt
       - PyPI/requirements.lock
@@ -43,7 +43,7 @@ jobs:
           filters: |
             python:
             - .github/actions/setup-python/action.yml
-            - .github/workflows/pypi--ci.yml
+            - .github/workflows/ci--pypi.yml
             - .python-version
             - PyPI/requirements.txt
             - PyPI/requirements.lock

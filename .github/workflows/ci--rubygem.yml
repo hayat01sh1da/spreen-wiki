@@ -13,7 +13,7 @@ on:
       - master
     paths:
       - .github/actions/setup-ruby/action.yml
-      - .github/workflows/rubygem--ci.yml
+      - .github/workflows/ci--rubygem.yml
       - .ruby-version
       - RubyGem/**/*.rb
       - RubyGem/**/*.rbs
@@ -27,7 +27,7 @@ on:
   pull_request:
     paths:
       - .github/actions/setup-ruby/action.yml
-      - .github/workflows/rubygem--ci.yml
+      - .github/workflows/ci--rubygem.yml
       - .ruby-version
       - RubyGem/**/*.rb
       - RubyGem/**/*.rbs
@@ -59,7 +59,7 @@ jobs:
           filters: |
             minitest:
               - .github/actions/setup-ruby/action.yml
-              - .github/workflows/rubygem--ci.yml
+              - .github/workflows/ci--rubygem.yml
               - .ruby-version
               - RubyGem/**/*.rb
               - RubyGem/*.gemspec
@@ -68,7 +68,7 @@ jobs:
               - RubyGem/Rakefile
             rubocop:
               - .github/actions/setup-ruby/action.yml
-              - .github/workflows/rubygem--ci.yml
+              - .github/workflows/ci--rubygem.yml
               - .ruby-version
               - RubyGem/**/*.rb
               - RubyGem/*.gemspec
@@ -80,7 +80,7 @@ jobs:
               - RubyGem/Steepfile
             steep:
               - .github/actions/setup-ruby/action.yml
-              - .github/workflows/rubygem--ci.yml
+              - .github/workflows/ci--rubygem.yml
               - .ruby-version
               - RubyGem/**/*.rb
               - RubyGem/**/*.rbs
