@@ -1,7 +1,7 @@
 # This workflow updates gem dependencies every day and opens a pull request
 # when any dependency changes are detected.
 
-name: RubyGem - Daily Dependencies Update
+name: Daily Dependencies Update - RubyGem
 
 on:
   schedule:
@@ -68,7 +68,7 @@ jobs:
             cat <<'OVERVIEW'
           ## 1. Overview
 
-          This pull request was created automatically by the RubyGem - Daily Dependencies Update workflow.
+          This pull request was created automatically by the Daily Dependencies Update - RubyGem workflow.
           It upgrades RubyGems and Bundler, widens every Gemfile pin to its major version (minor version for 0.x gems) so that minor and patch releases of frameworks such as Rails can land, updates every gem to the latest version within those bounds, mirrors the updated versions to the Gemfile, mirrors the new Bundler and gem versions to the Environment section of every README.md that documents them, and re-locks Gemfile.lock so its DEPENDENCIES section stays in sync with the Gemfile:
 
           ~~~console
@@ -91,7 +91,7 @@ jobs:
 
           ## 4. References
 
-          - [RubyGem - Daily Dependencies Update workflow run](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)
+          - [Daily Dependencies Update - RubyGem workflow run](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)
           - [bundle update documentation](https://bundler.io/man/bundle-update.1.html)
           - [RubyGems](https://rubygems.org/)
           SUMMARY
