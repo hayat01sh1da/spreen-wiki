@@ -4,7 +4,7 @@ autopep8==2.3.2
 flake8==7.5.0
 iniconfig==2.3.1
 invoke==3.0.3
-librt==0.16.0
+librt==0.17.0
 mccabe==0.7.0
 mypy==2.4.1
 mypy_extensions==1.2.0
