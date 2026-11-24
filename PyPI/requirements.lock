@@ -8,7 +8,7 @@ librt==0.17.0
 mccabe==0.7.0
 mypy==2.4.1
 mypy_extensions==1.2.0
-packaging==26.3
+packaging==26.4
 pathspec==1.1.1
 pluggy==1.7.0
 pycodestyle==2.15.0
